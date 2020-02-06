@@ -8,12 +8,22 @@ const toDos = [
   {id: '4', title: 'Transfer music to phone'}
 ];
 
-function ToDoList(props) {
-  const toDoElements = toDos.map(item => {
-    return <ListItem key={item.id} title={item.title} />
-  });
+// function ToDoList(props) {
+//   const toDoElements = toDos.map(item => {
+//     return <ListItem key={item.id} title={item.title} />
+//   });
 
-  return <ol>{toDoElements}</ol>;
-};
+//   return <ol>{toDoElements}</ol>;
+// };
+
+class ToDoList extends React.Component {
+  render() {
+    const toDoElements = toDos.map(item => {
+      return <ListItem key={item.id} title={item.title} />
+    });
+
+    return <ol>{toDoElements}</ol>
+  }
+}
 
 export default ToDoList;
