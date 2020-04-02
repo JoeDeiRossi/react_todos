@@ -1,6 +1,6 @@
 import React from 'react';
 
-class AddToDo extends React.Component {
+class AddToDoForm extends React.Component {
   constructor(props) {
     super(props);
 
@@ -25,6 +25,8 @@ class AddToDo extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     console.log('Form values:', this.state);
+    this.props.add({ ...this.state });
+    this.reset();
   }
 
   reset() {
@@ -58,4 +60,4 @@ class AddToDo extends React.Component {
   }
 }
 
-export default AddToDo;
+export default AddToDoForm;
